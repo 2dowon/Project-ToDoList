@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: #E3E3E3;
+    width: 100%;
+    height: 100%;
+    font-family: 'DM Sans', sans-serif;
+}
+
+button {
+    background-color:transparent;
+    border:none;
+    font-size:20px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Lobster', cursive;
+}
+
+.js-toDoForm {
+    display:flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+input {
+    width: 30%;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    transition: transform 200ms ease-in;
+}
+
+input:hover, input:focus {
+    transform: scale(1.1);
+    outline: none;
+}
+
+li {
+    display: flex;
+    height: 30px;
+    font-size: 25px;
+    float: left;
+    list-style: none;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.hoverAction:hover {
+    color:white;
+}
+
+.toDoBox {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pendingBox, .finishedBox {
+    width: 60%;
+    padding: 20px;
+}
+
+.pendingBox {
+    height: 350px;
+    background-color: gray;
+}
+
+.finishedBox {
+    height: 180px;
+    background-color: #BCBBB6;
+    color: gray;
+    /* text-decoration: line-through; */
+}
+
+h3 {
+    text-align: center;
+}
+
+i {
+    margin-left: 20px;
+    margin-right: 10px;
+    font-size: 20px;
+    align-self: center;
+}
