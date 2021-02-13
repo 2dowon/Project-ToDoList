@@ -18,14 +18,15 @@ button {
 
 h1 {
     text-align: center;
-    margin-top: 50px;
-    font-family: 'Lobster', cursive;
+    margin-top: 7vh;
+    font-family: 'Caveat', cursive;
+    font-size: 40px;
 }
 
 .js-toDoForm {
     display:flex;
     justify-content: center;
-    margin: 30px 0;
+    margin: 3vh 0 4vh 0;
 }
 
 input {
@@ -70,12 +71,12 @@ li {
 }
 
 .pendingBox {
-    height: 350px;
+    height: 50vh;
     background-color: gray;
 }
 
 .finishedBox {
-    height: 180px;
+    height: 20vh;
     background-color: #BCBBB6;
     color: gray;
     /* text-decoration: line-through; */
