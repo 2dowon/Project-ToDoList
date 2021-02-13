@@ -3,7 +3,6 @@ const dateTitle = dateContainer.querySelector("h1");
 
 function getToday() {
     const today = new Date();
-    console.log(today);
     let month = today.getMonth();
     let day = today.getDay();
     const date = today.getDate();
