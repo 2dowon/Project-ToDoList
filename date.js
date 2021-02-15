@@ -3,53 +3,13 @@ const dateTitle = dateContainer.querySelector("h1");
 
 function getToday() {
     const today = new Date();
-    let month = today.getMonth();
-    let day = today.getDay();
     const date = today.getDate();
 
-    switch(month) {
-        case 0:
-            month = "Jan";
-        case 1:
-            month = "Feb";
-        case 2:
-            month = "Mar";
-        case 3:
-            month = "Apr";
-        case 4:
-            month = "May";
-        case 5:
-            month = "Jun";
-        case 6:
-            month = "Jul";
-        case 7:
-            month = "Aug";
-        case 8:
-            month = "Sep";
-        case 9:
-            month = "Oct";
-        case 10:
-            month = "Nov";
-        case 11:
-            month = "Dec";
-    }
+    const arrMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    let month = arrMonths[today.getMonth()];
 
-    switch (day) {
-        case 0:
-            day = "Monday";
-        case 1:
-            day = "Tuesday";
-        case 2:
-            day = "Wednesday";
-        case 3:
-            day = "Thursday";
-        case 4:
-            day = "Friday";
-        case 5:
-            day = "Saturday";
-        case 6:
-            day = "Sunday";
-    }
+    const arrDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let day = arrDays[today.getDay()];
 
     dateTitle.innerText = `${day}, ${date} ${month}`;
 }

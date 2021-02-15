@@ -46,17 +46,19 @@ input:hover, input:focus {
 
 li {
     display: flex;
+    justify-content: center;
     height: 30px;
     font-size: 25px;
     float: left;
     list-style: none;
     cursor: pointer;
-    margin-right: 20px;
     margin-bottom: 10px;
+    transition: transform 150ms ease-in;
 }
 
+
 .hoverAction:hover {
-    color:white;
+    transform: scale(1.1);
 }
 
 .toDoBox {
@@ -68,6 +70,8 @@ li {
 .pendingBox, .finishedBox {
     width: 60%;
     padding: 20px;
+    display:flex;
+    justify-content: center;
 }
 
 .pendingBox {
@@ -87,8 +91,8 @@ h3 {
 }
 
 i {
-    margin-left: 20px;
-    margin-right: 10px;
+    margin-left: 10px;
+    margin-right: 25px;
     font-size: 20px;
     align-self: center;
 }

@@ -79,31 +79,37 @@ function handleBackClick(e) {
   saveState();
 }
 
-function buildGenericLi(task) {
+function templateLi(task) {
     const li = document.createElement("li");
     const span = document.createElement("span");
     const delBtn = document.createElement("i");
-    const bar = document.createElement("span");
     span.innerText = task.text;
-    span.setAttribute("class", "hoverAction");
-    bar.innerText = " | ";
+    li.setAttribute("class", "hoverAction");
     delBtn.setAttribute("class", "far fa-trash-alt");
+    delBtn.style.visibility = "hidden";
     delBtn.addEventListener("click", deleteTask);
-    li.append(span, delBtn, bar);
+    li.addEventListener("mouseenter", (e) => {
+      delBtn.style.visibility = "visible";
+      delBtn.style.color = "#d00000";
+    });
+    li.addEventListener("mouseleave", (e) => {
+      delBtn.style.visibility = "hidden";
+    });
+    li.append(span, delBtn);
     li.id = task.id;
     return li;
 }
 
 function paintPendingTask(task) {
-  const genericPending = buildGenericLi(task);
-  genericPending.addEventListener("click", handleFinishClick);
-  pendingList.append(genericPending);
+  const pendingLi = templateLi(task);
+  pendingLi.addEventListener("click", handleFinishClick);
+  pendingList.append(pendingLi);
 }
 
 function paintFinishedTask(task) {
-  const genericFin = buildGenericLi(task);
-  genericFin.addEventListener("click", handleBackClick);
-  finishedList.append(genericFin);
+  const finishedLi = templateLi(task);
+  finishedLi.addEventListener("click", handleBackClick);
+  finishedList.append(finishedLi);
 }
 
 function saveState() {
